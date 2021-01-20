@@ -1,0 +1,1 @@
+# ga-npm-wildcard-check
