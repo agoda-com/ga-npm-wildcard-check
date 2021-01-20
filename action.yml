@@ -1,0 +1,11 @@
+name: 'Prevent Wild card package refs in npm'
+description: 'This Action will allow you to check a package json and if a developer has added an expression it explodes, preventing teh build from passing.'
+inputs:
+  packagejson-file-full-path: 
+    description: 'Full Path to the package json file'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.packagejson-file-full-path }}
